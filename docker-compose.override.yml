@@ -8,4 +8,13 @@ services:
       - ./app:/app
     ports:
       - "8080:8080"
-    entrypoint: "npm test"
+    entrypoint: "npm run dev"
+  caddy:
+    image: caddy
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - $PWD/services/caddy/Caddyfile:/etc/caddy/Caddyfile
+    depends_on:
+      - app
