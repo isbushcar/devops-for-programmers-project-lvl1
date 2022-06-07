@@ -5,6 +5,11 @@ on:
     branches:
       - 'main'
 
+env:
+  POSTGRES_PASSWORD: ${{ secrets.DATABASE_PASSWORD }}
+  POSTGRES_USER: ${{ secrets.DATABASE_USERNAME }}
+  POSTGRES_DB: ${{ secrets.DATABASE_NAME }}
+
 jobs:
   test:
     runs-on: ubuntu-latest
