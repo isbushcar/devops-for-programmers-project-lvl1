@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - run: make deps
+      - run: docker-compose run --rm app npm ci
       - run: make ci
 
   push:
