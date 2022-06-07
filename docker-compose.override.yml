@@ -1,0 +1,9 @@
+version: "3.9"
+services:
+  app:
+    build: .
+    volumes:
+      - ./app:/app
+    ports:
+      - "8080:8080"
+    entrypoint: "npm test"

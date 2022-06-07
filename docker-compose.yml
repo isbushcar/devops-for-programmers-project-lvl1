@@ -1,0 +1,8 @@
+version: "3.9"
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile.production
+    image: isbushcar/devops-for-programmers-project-lvl1
+    entrypoint: "npm test"
