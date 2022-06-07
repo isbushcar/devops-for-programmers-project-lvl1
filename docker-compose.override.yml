@@ -8,7 +8,9 @@ services:
       - ./app:/app
     ports:
       - "8080:8080"
-    entrypoint: "npm run dev"
+    entrypoint: "bash -c 'sleep 3 && npm start'"
+    env_file:
+      - .env
   caddy:
     image: caddy
     ports:
