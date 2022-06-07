@@ -34,5 +34,5 @@ jobs:
           context: .
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/devops-for-programmers-project-lvl1:latest
-          file: "{{defaultContext}}/Dockerfile.production"
+          file: "./Dockerfile.production"
     needs: test
